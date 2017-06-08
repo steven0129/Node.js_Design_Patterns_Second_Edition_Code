@@ -45,6 +45,8 @@ module.exports = (serviceLocator) => {
       callback(null, {username: userData.username});
     });
   };
+
+  console.log('authService')
   
   return authService;
 };

@@ -31,6 +31,8 @@ module.exports = (serviceLocator) => {
       }
     );
   };
+
+  console.log('authController')
   
   return authController;
 };
