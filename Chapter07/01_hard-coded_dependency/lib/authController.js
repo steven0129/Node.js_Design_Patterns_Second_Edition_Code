@@ -3,6 +3,7 @@
 const authService = require('./authService');
 
 exports.login = (req, res, next) => {
+  console.log('request login')
   authService.login(req.body.username, req.body.password,
     (err, result) => {
       if (err) {
@@ -17,6 +18,7 @@ exports.login = (req, res, next) => {
 };
 
 exports.checkToken = (req, res, next) => {
+  console.log('request checkToken')
   authService.checkToken(req.query.token,
     (err, result) => {
       if (err) {

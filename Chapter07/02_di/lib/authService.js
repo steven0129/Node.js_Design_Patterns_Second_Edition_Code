@@ -42,6 +42,7 @@ module.exports = (db, tokenSecret) => {
       callback(null, {username: userData.username});
     });
   };
-  
+
+  console.log('authService: ' + JSON.stringify(Object.getOwnPropertyNames(authService)))  
   return authService;
 };

@@ -7,7 +7,8 @@ module.exports = (authService) => {
     authService.login(req.body.username, req.body.password,
       (err, result) => {
         if (err) {
-          return res.status(401).send({
+          console.log(err)
+	  return res.status(401).send({
             ok: false,
             error: 'Invalid username/password'
           });
@@ -30,6 +31,7 @@ module.exports = (authService) => {
       }
     );
   };
-  
+
+  console.log('authService: ' + JSON.stringify(Object.getOwnPropertyNames(authController)))
   return authController;
 };
